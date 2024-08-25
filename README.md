@@ -12,7 +12,7 @@ more than 14 parameters compared to the standard implementation for the maxima o
 
 It takes an average of 35 seconds to calculate the Pareto efficient configurations for all 703,560 builds for all 14 in-game attributes on an NVIDIA GeForce GTX 1650 (4Gb memory, 
 1485 MHz). If necessary, you can trade off some performance to reduce memory consumption for other use cases. 
-In this case, I moved the entire array (703560 x 14) of int8s and the array keeping track of the efficient points (0 to 6346 x 14) on the GPU to minimize data movement overhead between
+In this case, memory is not a limiting factor. Therefore, I moved the entire array (703560 x 14) of int8s and the array keeping track of the efficient points (0 to 6346 x 14) on the GPU to minimize data movement overhead between
 host and gpu.
 
 
